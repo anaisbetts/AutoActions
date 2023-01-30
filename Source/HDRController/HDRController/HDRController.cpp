@@ -537,6 +537,16 @@ extern "C"
 		SetGlobalHDR(enabled);
 	}
 
+	__declspec(dllexport) void EnableGlobalHDRState()
+	{
+		SetGlobalHDR(true);
+	}
+
+	__declspec(dllexport) void DisableGlobalHDRState()
+	{
+		SetGlobalHDR(false);
+	}
+
 	__declspec(dllexport) bool GetGlobalHDRState()
 	{
 		return HDRIsOn();
